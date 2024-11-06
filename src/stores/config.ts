@@ -1,4 +1,4 @@
-import { theme as antTheme } from 'ant-design-vue'
+import { theme as antTheme, type ConfigProviderProps } from 'ant-design-vue'
 
 type Theme = 'light' | 'dark'
 export const useConfigStore = defineStore('config', () => {
@@ -12,19 +12,23 @@ export const useConfigStore = defineStore('config', () => {
 			token: {
 				colorPrimary: brandColor.value
 			},
-			algorithm: theme.value === 'light' ? antTheme.defaultAlgorithm : antTheme.darkAlgorithm
+			algorithm: theme.value === 'light' ? antTheme.defaultAlgorithm : antTheme.darkAlgorithm,
 		}
 	})
 
 
-	watch(() => theme.value, (newTheme, oldTheme) => {
-		document.documentElement.classList.remove(oldTheme as string)
-    document.documentElement.classList.add(newTheme)
+	watch(() => theme.value, newTheme => {
+		document.documentElement.className = newTheme
 	})
 
   return {
 		layout,
 		theme,
 		configProvider
+	}
+}, {
+	persist: {
+		key: 'APP:CONFIG',
+		pick: ['layout', 'theme']
 	}
 })

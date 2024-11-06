@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import { reactive, watch, h } from 'vue';
 import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
   PieChartOutlined,
   MailOutlined,
   DesktopOutlined,

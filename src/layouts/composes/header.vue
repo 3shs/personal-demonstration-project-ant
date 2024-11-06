@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 const configStore = useConfigStore()
 </script>
 
 <template>
-	<a-layout-header class="bg-white! px-0! dark:bg-black! dark:text-white!">
+	<a-layout-header class="bg-white! px-0! dark:bg-black! dark:text-dark-text!">
 		<a-space>
 			<a-switch
 				v-model:checked="configStore.theme"
@@ -23,6 +22,7 @@ const configStore = useConfigStore()
 			>
 
 			</a-select>
+			111
 		</a-space>
 	</a-layout-header>
 </template>

@@ -6,9 +6,7 @@ import Sider from '../composes/sider.vue'
 
 <template>
 	<a-layout class="h-full">
-		<Sider>
-
-		</Sider>
+		<Sider></Sider>
 		<a-layout>
 			<Header></Header>
 			<a-layout-content>

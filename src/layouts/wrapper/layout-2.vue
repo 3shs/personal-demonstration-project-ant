@@ -8,11 +8,11 @@ import Sider from '../composes/sider.vue'
 	<a-layout class="h-full overflow-hidden">
 		<Header></Header>
 		<a-layout>
-			<Sider>
-			</Sider>
+			<Sider></Sider>
 			<a-layout-content>
 				<a-button type="primary">按钮</a-button>
 				<a-input></a-input>
+				<a-switch></a-switch>
 			</a-layout-content>
 		</a-layout>
 	</a-layout>
